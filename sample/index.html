@@ -6,22 +6,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Remote Joystick Lib (demo)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+      body {
+        background-color: #dfe6e9;
+      }
+
+      h1, p {
+        text-align: center;
+        color: #2d3436;
+      }
+
+      .container {
+        margin: auto;
+        max-width: 480px;
+      }
+
+      .row {
+        text-align: center;
+        margin: 0;
+        padding-bottom: 1px;
+      }
+
+      .number {
+        background-color: #a29bfe;
+        box-shadow: 5px 5px #7f8c8d;
+        color: #2d3436;
+        font-size: 2em;
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      .number:hover {
+        background-color: #fdcb6e;
+        color: #2d3436;
+        cursor: pointer;
+      }
+    </style>
   </head>
 
-  <body>  
+  <body>
 
-    <button id="btn-left"></button>
-    <button id="btn-up"></button>
-    <button id="btn-right"></button>
-    <button id="btn-down"></button>
+    <header>
+      <h1>Remote Joystick Lib <small>(demo)</small></h1>
+      <p>
+        Easily attach URL-based actions to your keyboard or graphic buttons, if DOM is available.
+      </p>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <span class="number" id="btn-1">1</span>
+        <span class="number" id="btn-2">2</span>
+        <span class="number" id="btn-3">3</span>
+      </div>
+      <div class="row">
+        <span class="number" id="btn-4">4</span>
+        <span class="number" id="btn-5">5</span>
+        <span class="number" id="btn-6">6</span>
+      </div>
+      <div class="row">
+        <span class="number" id="btn-7">7</span>
+        <span class="number" id="btn-8">8</span>
+        <span class="number" id="btn-9">9</span>
+      </div>
+      <div class="row">
+        <span class="number" id="btn-0">0</span>
+      </div>
+    </div>
+
+    <footer>
+      <p><small>Very ugly, but free source <a href="https://github.com/Mazuh/RemoteJoystickLib" target="_blank">on GitHub</a></small>!</p>
+    </footer>
 
     <script src="../remotejoysticklib.js"></script>
     <script>
       initRemoteJoystickByGUI({
-        'btn-left': 'https://mydomain.com/game/?player_id=auth=direction=left',
-        'btn-up': 'https://mydomain.com/game/?player_id=auth=direction=up',
-        'btn-right': 'https://mydomain.com/game/?player_id=auth=direction=right',
-        'btn-down': 'https://mydomain.com/game/?player_id=auth=direction=down'
+        'btn-0': 'https://mydomain.com/game/?token=&num=0',
+        'btn-1': 'https://mydomain.com/game/?token=&num=1',
+        'btn-2': 'https://mydomain.com/game/?token=&num=2',
+        'btn-3': 'https://mydomain.com/game/?token=&num=3',
+        'btn-4': 'https://mydomain.com/game/?token=&num=4',
+        'btn-5': 'https://mydomain.com/game/?token=&num=5',
+        'btn-6': 'https://mydomain.com/game/?token=&num=6',
+        'btn-7': 'https://mydomain.com/game/?token=&num=7',
+        'btn-8': 'https://mydomain.com/game/?token=&num=8',
+        'btn-9': 'https://mydomain.com/game/?token=&num=9'
       });
     </script>
 
