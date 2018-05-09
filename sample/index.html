@@ -1,0 +1,29 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Remote Joystick Lib (demo)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>  
+
+    <button id="btn-left"></button>
+    <button id="btn-up"></button>
+    <button id="btn-right"></button>
+    <button id="btn-down"></button>
+
+    <script src="../remotejoysticklib.js"></script>
+    <script>
+      initRemoteJoystickByGUI({
+        'btn-left': 'https://mydomain.com/game/?player_id=auth=direction=left',
+        'btn-up': 'https://mydomain.com/game/?player_id=auth=direction=up',
+        'btn-right': 'https://mydomain.com/game/?player_id=auth=direction=right',
+        'btn-down': 'https://mydomain.com/game/?player_id=auth=direction=down'
+      });
+    </script>
+
+</body>
+</html>
